@@ -1,0 +1,64 @@
+<head>
+    {% include 'partials/_head.html' %}
+    {% block title %}<title> ✮ | {{  post.title }}</title>{% endblock %}
+</head>
+{% include 'partials/_nav.html' %}
+    <section id="home">
+        <div class="set_width">
+            <div class="square2">
+                <div class="post_header">
+                    <h2>{{ post.title }}</h2>
+                    <span class="date">{{ post.created }} | {{ post.author }}</span>
+                    <div class="cube"></div>
+                </div>
+                <div class="bar"></div>
+                <div class="post_body">
+                    {{ post.body|safe }}
+                </div>
+                <div class="bar"></div>
+                {% if comments %}
+                <div class="comments">
+                    <div class="set_width">
+                        <div class="comments_list">
+                            <h2>Comentários ({{ comments.count }})</h2>
+                            {% for c in comments %}
+                            <div class="unique_comments">
+                                <h5>{{ c.name }}</h5>
+                                <hr>
+                                <small>{{ c.date  }}</small>
+                                <p>{{ c.text }}</p>
+                            </div>
+                            {% endfor %}
+                            
+                        </div>
+                    </div>
+                    {% endif %}
+                    <div class="set_width">
+                        <div class="alert_success" role="alert">
+                            <p>Preencha os campos para enviar seu comentário para ser revisado.</p>
+                        </div>
+                    </div>
+                    <div class="set_width">
+                        <div class="leave_comment">
+                            <h2 class="h2_comments">Deixe um Comentário</h2>
+                            <form method="POST" action="#send_comment">
+                                {% csrf_token %}
+                                <table class="table">
+                                    {{ form }}
+                                    <tr>
+                                        <td colspan="2">
+                                            <input class="send_comment_button" id="send_comment" type="submit" value="Enviar">
+                                        </td>
+                                    </tr>
+                                </table>
+                                <div class="g-recaptcha" data-sitekey="6LfZcS4fAAAAAGfEqIVYmHsEByEfw6MCJHFkJy1W"></div><br/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% include 'partials/_footer.html' %}

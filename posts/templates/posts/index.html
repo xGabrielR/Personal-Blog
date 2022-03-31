@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load humanize %}
+
+{% block title %}<title> ➮ | Blogzin do cT</title>{% endblock %}
+{% block content %}
+{% for p in posts %}
+    <div class="post">
+        <div class="post_content">
+                <i class="fas fa-{{ p.icon }}"></i>
+            <div class="separate">
+                <a href="{% url 'detail' p.slug %}" target="_blank"><h3>{{ p.title }}</h3></a>
+                <a href="{% url 'detail' p.slug %}" target="_blank"><p class='post_simple_text'>{{ p.text_center }}</p></a>
+                <span class="date">{{ p.created|naturalday|title }} | {{ p.author }}</span>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+
+{% endblock %}
