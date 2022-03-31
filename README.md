@@ -4,13 +4,16 @@
 <hr>
 <p>I really enjoy writing some stories, and more importantly sharing these stories, with this blog weekly, I will post some post about various things, I have already posted my entire journey of a game and recorded it in a notebook, now I can summarize this for the world!!!</p>
 
-<p>Please, check this post <a href='https://github.com/xGabrielR/Blog-Pufzilla'>This is other Django Webapp blog i have made for a Arts Teacher.</a></p>
+<p>Please, check this repo: <a href='https://github.com/xGabrielR/Blog-Pufzilla'>This is other Django Webapp blog i have made for a Arts Teacher.</a></p>
 
 <h3>0.1. What is a Blog ?</h3>
 <p>Blog is a simple site where the objective is to share stories, documentaries or any other type of subject divided into posts, each post has a date and a category. For example, a recipe site is a blog where each post is a recipe and throughout the week that same site is updated with new recipes.</p>
 
 <h2>1. Solution Strategy</h2>
 <hr>
+
+![my_blog](https://user-images.githubusercontent.com/75986085/160956358-5149d393-a07b-4e28-9cb1-168d119d8b4c.gif)
+
 
 <h3>1.1. First CRISP Cycle</h3>
 <ul>
@@ -24,7 +27,7 @@
     <dt>Django Admin.</dt>
       <dd>Simple publish boolean field to check if posts is published or comment is published.</dd>
     <dt>Deployment.</dt>
-      <dd>I deploy at Heroku, you can acess with this link example of Pufzilla's projects: <a href='https://ctzin.herokuapp.com/'>My Blog</a>.</dd>
+      <dd>I deploy at Heroku, you can acess with this link example of this Project projects: <a href='https://ctzin.herokuapp.com/'>My Blog</a>.</dd>
   </dl>
 </ul>
 
