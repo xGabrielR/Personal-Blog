@@ -1,0 +1,17 @@
+<div class="bar1"></div>
+<nav class="navbar">
+    <div class="set_width">
+        <a href="{% url 'index' %}" id='logo' class="logo">Blog do cT</a>
+        <button class="menu_toggler">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="navbar_menu">
+            <a href="{% url 'category' 'tech' %}">Tech</a>
+            <a href="{% url 'category' 'mh' %}" class='red'>MH</a>
+            <a href="{% url 'category' 'tes' %}" class='red'>TES</a>
+            <a href="{% url 'category' 'm&b' %}" class='red'>M&B</a>
+        </div>
+    </div>
+</nav>
